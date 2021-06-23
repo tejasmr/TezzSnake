@@ -1,0 +1,10 @@
+^C:\USERS\TEJAS M R\CODE\CPP\TEZZSNAKE\BUILD\CMAKEFILES\5F53E1055CD5E0A5E647C6382CF9D99A\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Tejas M R/Code/cpp/TezzSnake" "-BC:/Users/Tejas M R/Code/cpp/TezzSnake/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Tejas M R/Code/cpp/TezzSnake/build/TezzSnake.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
