@@ -1,2 +1,0 @@
-C:\Users\Tejas M R\Code\cpp\TezzSnake\build\Debug\glfw3.dll
-C:\Users\Tejas M R\Code\cpp\TezzSnake\build\app.dir\Debug\app.vcxproj.CopyComplete
