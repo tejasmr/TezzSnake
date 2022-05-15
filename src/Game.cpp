@@ -24,8 +24,9 @@ Point2d Game::GetDirection() {
 	return snake.previousDirection;
 }
 
-void Game::Play() {
+void Game::Play(GLFWkeyfun _callback) {
 	window.Init();
+	callback = _callback;
 	Timer timer(2.0);
 	while( !window.ShouldClose() ) {
 		window.StartRendering();
@@ -34,7 +35,7 @@ void Game::Play() {
 		timer.createTask([&]() {
 			Move( snake.GetDirection() );
 		});
-		SetKeyMap(callback);
+		window.SetKeyMap(callback);
 		Update();
 		Artist::UseColor(0.3, 1.0, 0.3);
 		snake.SetOffset(offset);
@@ -51,11 +52,6 @@ void Game::Play() {
 	}
 
 	window.Destroy();
-}
-
-void Game::SetKeyMap( GLFWkeyfun _callback ) {
-	callback = _callback;
-	window.SetKeyMap(callback);
 }
 
 void Game::Update() {

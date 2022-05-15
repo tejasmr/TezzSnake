@@ -25,9 +25,8 @@ public:
 
 	Point2d GetDirection();
 
-	void Play();
+	void Play( GLFWkeyfun );
 	void Update();
-	void SetKeyMap( GLFWkeyfun );
 
 	void DrawApple();
 	void SpawnApple();

@@ -3,7 +3,7 @@
 #ifndef TEZZSNAKE_WINDOW_H
 #define TEZZSNAKE_WINDOW_H
 
-#include <GLFW/glfw3.h>
+#include "C:/ProgramData/chocolatey/include/GLFW/glfw3.h"
 
 #include "Definitions.h"
 #include "Size.h"

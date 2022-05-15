@@ -1,11 +1,10 @@
 #include "../include/Main.h"
 #include <iostream>
-#include <GLFW/glfw3.h>
+#include "C:/ProgramData/chocolatey/include/GLFW/glfw3.h"
 
 int main() {
 	game = new Game("TezzSnake", 600.0, 600.0, Count(40, 40));
-	game->SetKeyMap(Move);
-	game->Play();
+	game->Play(Move);
 }
 
 

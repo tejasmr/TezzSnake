@@ -4,7 +4,7 @@
 #define TEZZSNAKE_TIMER_H
 
 #include <functional>
-#include <GLFW/glfw3.h>
+#include "C:/ProgramData/chocolatey/include/GLFW/glfw3.h"
 
 struct Timer {
 private:
