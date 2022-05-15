@@ -1,6 +1,8 @@
-rm .\build -Recurse
+Remove-Item .\build -Recurse
 
 mkdir build
-cmake -S . -B .\build
-cmake --build .\build
+Set-Location build
+cmake .. -G "MinGW Makefiles"
+cmake --build .
 .\build\Debug\app.exe
+Set-Location ..
