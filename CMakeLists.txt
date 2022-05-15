@@ -5,7 +5,8 @@ cmake_minimum_required (
 
 project ( TezzSnake )
 
-set ( CMAKE_CXX_STANDARD 17 )
+set(CMAKE_C_COMPILER "gcc")
+set(CMAKE_CXX_COMPILER "g++")
 
 add_executable (
 	app
@@ -33,13 +34,7 @@ add_executable (
 	include/Window.h
 )
 
-
+set(glfw3_DIR "C:/Program Files (x86)/GLFW/lib/cmake/glfw3/")
 find_package( OpenGL REQUIRED )
-# find_package( glfw3 REQUIRED )
-include_directories(C:/GL/glfw/include)
-
-target_link_libraries (
-	app
-	C:/GL/glfw/lib-vc2019/glfw3.lib
-	${OPENGL_LIBRARIES}
-)
+find_package( glfw3 REQUIRED )
+target_link_libraries(app OpenGL::GL glfw)
